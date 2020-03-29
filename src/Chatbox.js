@@ -8,7 +8,7 @@ export default function Chatbox() {
     const msgText = useRef()
 
     const [texts, setTexts] = useState([])
-    const [chats, setChats] = useState(["Chat 1", "Chat 2", "Chat 3", "Chat 4", "Chat 5", "Chat 6"])
+    const [chats, setChats] = useState(["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Chat 2", "Chat 3", "Chat 4", "Chat 5", "Chat 6", "Chat 7", "Chat 8"])
 
     function sendText(e) {
         const msg = msgText.current.value;
@@ -20,17 +20,19 @@ export default function Chatbox() {
     }
 
     function changeChat(e) {
-        
+
     }
 
     return (
         <div className={ "chat" }>
             <div className={ "chatselect" }>
-                    <Chats onClick={changeChat} chats={ chats } />
+                <div className={"selwrapper"}>
+                        <Chats onClick={changeChat} chats={ chats } />
+                </div>
             </div>
             <div className={ "activechat" }>
                 <div className={ "chatbox" }>
-                    <Texts texts={ texts } />
+                    <Texts texts={ texts } user={user}/>
                 </div>
                 <div className= { "messagebox" }>
                     <input type="text" ref={ msgText }></input>

@@ -6,8 +6,8 @@ body {
 
 .chat {
   margin: 20px;
-  width: 600px;
-  height: 210px;
+  width: 800px;
+  height: 400px;
   border: 1px solid grey;
   border-radius: 5px;
 }
@@ -21,40 +21,64 @@ body {
 }
 
 .chatselect>div {
+  border-right: 1px solid grey;
+  height: 100%;
+}
+
+.chatselect>div>div {
   cursor: pointer;
   margin-top: 1px;
   margin-left: 1px;
   padding: 3px;
   width: 180px;
   border-bottom: 1px solid grey;
-  border-right: 1px solid grey;
+  transition: background-color 0.5s;
+  transition: font-size 0.5s;
 }
 
-.chatselect>div:last-child {
+.chatselect>div>div:last-child {
   border-bottom: none;
 }
 
-.chatselect>div:hover {
+.chatselect>div>div:hover {
   background-color: lightgray;
   font-size: larger;
 }
 
+.chatselect>div>div>p {
+  overflow: hidden;
+  max-width: inherit;
+  text-overflow: ellipsis;
+}
+
 .activechat {
   padding: 20px;
-  width: 350px;
+  width: 70%;
   float: right;
 }
 
 .chatbox {
   padding: 5px;
-  overflow: scroll;
-  height: 100px;
+  overflow-y: scroll;
+  height: 300px;
   border: 1px solid grey;
 }
 
 .chatbox>p {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  float: left;
+  clear: both;
+  border: 0px solid;
+  border-radius: 30px;
+  max-width: 70%;
+  word-wrap: break-word;
+  background-color: darkgray;
+  padding: 10px;
+  margin: 5px;
+}
+
+p.ownText {
+  float: right;
+  background-color: rgb(68, 162, 194);
 }
 
 .messagebox {
@@ -63,4 +87,8 @@ body {
 
 .messagebox>button {
   cursor: pointer;
+}
+
+.messagebox>input {
+  width: 84%;
 }
