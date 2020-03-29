@@ -3,6 +3,64 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-.chatbox>ul {
-  list-style-type:none;
+
+.chat {
+  margin: 20px;
+  width: 600px;
+  height: 210px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.chatselect {
+  height: 100%;
+  width: 200px;
+  float: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chatselect>div {
+  cursor: pointer;
+  margin-top: 1px;
+  margin-left: 1px;
+  padding: 3px;
+  width: 180px;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.chatselect>div:last-child {
+  border-bottom: none;
+}
+
+.chatselect>div:hover {
+  background-color: lightgray;
+  font-size: larger;
+}
+
+.activechat {
+  padding: 20px;
+  width: 350px;
+  float: right;
+}
+
+.chatbox {
+  padding: 5px;
+  overflow: scroll;
+  height: 100px;
+  border: 1px solid grey;
+}
+
+.chatbox>p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.messagebox {
+  margin: 20px;
+}
+
+.messagebox>button {
+  cursor: pointer;
 }
